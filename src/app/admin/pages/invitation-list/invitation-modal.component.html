@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Hi {{data.invitationName}}</h1>
+<div mat-dialog-content style="width:100%" fxLayout="column" fxLayoutAlign="center center">
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.invitationCode">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.attendStatus">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.numberInParty">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.foodComment">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.songComment">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="saveItems(data)">save</button>
+</div>

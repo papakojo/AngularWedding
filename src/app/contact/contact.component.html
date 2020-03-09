@@ -1,0 +1,14 @@
+<div class ="contactF" >
+    <button mat-button  (click)="onCloseClick()" class="closeButton">X</button>
+        
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="space-around center">
+      
+      <input matInput type="text" placeholder="Name" formControlName="name">
+      <br>
+      <input matInput type="text" placeholder="Email" formControlName="email">
+      <br>
+      <textarea style="height:200px" placeholder="Message" formControlName="message"></textarea>
+    
+      <button class ="button" type="submit" [disabled]="form.invalid">Submit</button>
+      </form>
+</div>

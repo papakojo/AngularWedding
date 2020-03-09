@@ -1,0 +1,37 @@
+<div class="titleItems">
+
+<div class="left">
+<span>
+  
+    <button mat-raised-button (click)="export()">
+      Export
+    </button>
+    <button mat-raised-button (click)="goHome()">
+      Home Page
+    </button>
+  </span>
+</div> 
+
+<div class="right">
+  <table>
+    <tr>
+      <th>Accepted</th>
+      <th>Declined</th>
+      <th>No Response</th>
+      <th>Number Attending</th>
+    </tr>
+    <tr>
+      <td>{{numberOfYes  }}</td>
+      <td>{{numberOfNo}}</td>
+      <td>{{noResponse}}</td>
+      <td>{{numberAttending}}</td>
+    </tr>
+    </table>
+</div>
+</div>
+<br>
+  <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)"
+    (editConfirm)="onSaveConfirm($event)" (createConfirm)="onCreateConfirm($event)" (userRowSelect)="onRowSelect($event)"
+    (custom)="openDialog($event)">
+  </ng2-smart-table>
+  

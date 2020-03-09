@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "src/app/styles/font.scss";
+
+:root {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary:#141418;
+    --bg-secondary: #141418;
+    --transition-speed:300ms;
+  }
+
+  @font-face {
+    font-family: 'pirou';
+    src: url($pirou-otf-font-path) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'dreamwood';
+    src: url($dreamwood-ttf-font-path) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+   // color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+//   body::-webkit-scrollbar {
+//     width: 0.45rem;
+//   }
+  
+//   body::-webkit-scrollbar-track {
+//       background: #ffffff;
+//   }
+  
+//   body::-webkit-scrollbar-thumb {
+//       background: #484fcf;
+//   }
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #484fcf;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    height: 5px;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #484fcf;; 
+}
+//   main {
+//    // margin-left: 5rem;
+//   }
+  
+
+
+  
+  
+  

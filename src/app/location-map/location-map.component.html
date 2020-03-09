@@ -1,0 +1,20 @@
+<google-map #mark height="75vh" width="100vw"  [center]="center" (mapMousemove)="move($event)"
+  (mapRightclick)="removeLastMarker()" [options]="mapOptions">
+  <map-marker #marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition" 
+    [options]="markerOptions" (mapClick)="openInfoWindow(marker)"></map-marker>
+  <map-info-window [options]="windowOptions">
+    <mat-card class="map-info" fxFlexFill>
+      <mat-card-header>
+
+
+        <mat-card-title>Yonge-Dundas Square</mat-card-title>
+        <mat-card-subtitle> 1 Dundas St E, Toronto, ON M5B 2R8</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </map-info-window>
+</google-map>
+
+
+
+
+<div #mapContainer id="map"></div>

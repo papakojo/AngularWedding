@@ -1,0 +1,117 @@
+<div class="rsvp">
+  <div class="rsvp-title"> ✾─── RSVP ───✾</div>
+
+  <mat-card class="rsvpContent" fxLayout="column" fxLayoutAlign="space-around center">
+    <mat-card-header>
+    </mat-card-header>
+    <div class="formItems" fxLayout="column" fxLayoutAlign="space-around center">
+      <mat-card-content class="formthings">
+  
+        <div>
+
+          <form class="rsvpForm" [formGroup]="searchF" (ngSubmit)="searchItems()">
+            <mat-form-field appearance="outline">
+              <mat-label>Please enter word from the back of invitation </mat-label>
+              <input formControlName="invitationCode" matInput placeholder="Placeholder">
+
+            </mat-form-field>
+            <div class="centerA">
+              <button mat-raised-button type="submit">Search</button>
+
+            </div>
+          </form>
+
+        </div>
+
+        <br>
+
+        <section>
+          <div class="centerA">
+            <p class="inviteeAddress">{{searchRes}}</p>
+          </div>
+
+          <div class="nothingFound" *ngIf="nothingFound" fxLayoutAlign="space-around center">
+            <button (click)="openDialog()">Contact Us</button>
+          </div>
+          <br>
+
+          <div *ngIf="openform">
+            <section class="example-section">
+
+
+            </section>
+            <form #myForm="ngForm" [formGroup]="inviteForm" (ngSubmit)="submitRSVP()" novalidate>
+              <div class="div-champs">
+                <div class="centerA">
+                  <p id="champs">
+                    <span id="required">Will you be attending?</span>
+                  </p>
+                </div>
+                <div class="centerA">
+
+                  <mat-radio-group formControlName="attendStatus">
+                    <mat-radio-button class="example-margin" value="yes">Yes</mat-radio-button>
+                    <mat-radio-button class="example-margin" value="no">No</mat-radio-button>
+
+                  </mat-radio-group>
+
+                </div>
+              </div>
+              <div *ngIf="inviteForm.value.attendStatus == 'yes'  " class="example-textarea">
+
+                <section>
+                  <div class="centerA">
+                    <p id="champs">
+                      <span id="required">How many are in your party?</span>
+                    </p>
+                  </div>
+
+                  <div class="centerA">
+                    <mat-radio-group formControlName="numberInParty">
+                      <mat-radio-button class="example-margin" [checked]=2 value=2>2</mat-radio-button>
+                      <mat-radio-button class="example-margin" value=1>1</mat-radio-button>
+
+
+                    </mat-radio-group>
+                  </div>
+                </section>
+                <section>
+                  <div class="centerA">
+                    <p id="champs">
+                      <span id="required">Do you have any dietary restrictions?</span>
+                    </p>
+                  </div>
+                  <div class="col-75">
+                    <textarea formControlName="foodComment" matInput placeholder="Leave a comment">
+                        </textarea>
+                  </div>
+                </section>
+                <br>
+                <section>
+                  <div class="centerA">
+                    <p id="champs">
+                      <span id="required">Request a song to play at the reception</span>
+                    </p>
+                  </div>
+
+                  <div class="col-75">
+                    <textarea formControlName="songComment" matInput placeholder="Leave a comment">
+                        </textarea>
+                  </div>
+                </section>
+              </div>
+
+              <br>
+              <section class="fbutton">
+                <button mat-raised-button type="submit">Submit</button>
+              </section>
+
+            </form>
+
+          </div>
+
+        </section>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>

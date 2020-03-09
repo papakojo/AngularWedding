@@ -1,6 +1,16 @@
-# NatalieAndDerrick
+# AngularWedding
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+
+## Install and Run
+
+Run `npm i --save` to install dependencies 
+
+
+## Notes
+If you're using the backend, you have to have firebase account and input your data through firebase amin or through yourapp/amin interface.
+The only sign in to the admin panel is though google.
+
 
 ## Development server
 

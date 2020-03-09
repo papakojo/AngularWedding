@@ -1,0 +1,12 @@
+<div class ="responseForm" >
+        <button mat-button  (click)="onCloseClick()" class="closeButton">X</button>
+            
+        <form [formGroup]="responseForm" (ngSubmit)="sendResponse()" fxLayout="column" fxLayoutAlign="space-around center">
+          
+          <br>
+          <textarea style="height:200px" placeholder="Message" formControlName="response"></textarea>
+        
+          <button class ="button" type="submit" >Submit</button>
+          </form>
+          <!-- <button class ="button" type="cancel" (click)="openSnackBar()" aria-label="Show an example snack-bar">Cancel</button> -->
+    </div>

@@ -1,0 +1,97 @@
+.table-container
+{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  max-width: 900px;
+}
+  
+.mat-table
+{
+  overflow: auto;
+  max-height: 500px;
+}
+
+.example-header-cell {
+  /* text-transform: uppercase; */
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+$table-font-color: #606c71;
+$table-border-color: #e9ebec;
+$table-header-font: #000000;
+
+:host ::ng-deep ng2-smart-table {
+    table{
+      color: $table-font-color;
+      tr {
+        td,th{
+          border: 1px solid $table-border-color;
+          color: $table-header-font;
+        }
+      }
+      tr td{
+        font-size:0.9em;
+        word-break: break-all;
+        }
+        tr:hover {background-color:#f5f5f5;}
+    }
+  }
+//} 
+
+
+
+ ng2-smart-table table tr td{
+    font-size:0.8em;
+    word-break: break-all;
+    }
+
+
+
+
+    .titleItems {
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        justify-content:flex-start;
+        align-items:stretch;
+    }
+    
+    .left {order:1;  flex-basis:100%; }
+    .right {order:2; flex-basis:100%; }
+    
+    @media screen and (min-width:600px) {
+        .titleItems{
+           flex-wrap:nowrap;
+       } 
+    
+        .left {
+           // flex-basis:200px;
+            order:1;
+        }
+      
+        .right {
+            //flex-basis:200px;
+            order:2;
+        }
+    }
+
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }

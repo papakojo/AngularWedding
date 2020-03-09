@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "NatalieAndDerrick": {
+    "AngularWedding": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/NatalieAndDerrick",
+            "outputPath": "dist/AngularWedding",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+        
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "NatalieAndDerrick:build"
+            "browserTarget": "AngularWedding:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "NatalieAndDerrick:build:production"
+              "browserTarget": "AngularWedding:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "NatalieAndDerrick:build"
+            "browserTarget": "AngularWedding:build"
           }
         },
         "test": {
@@ -114,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "NatalieAndDerrick:serve"
+            "devServerTarget": "AngularWedding:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "NatalieAndDerrick:serve:production"
+              "devServerTarget": "AngularWedding:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "NatalieAndDerrick"
+  "defaultProject": "AngularWedding"
 }

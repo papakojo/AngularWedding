@@ -1,0 +1,60 @@
+
+
+
+<ng-container class="example-container" *ngIf="shouldRun">
+  <mat-toolbar class="example-header">Header</mat-toolbar>
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="options.value.fixed"
+      [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
+      {{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav
+
+      <button mat-menu-item *ngFor="let item of navItems" [routerLink]="[item.link]" fxLayout="column">
+        <span>{{ item.title }}</span>
+      </button>
+    </mat-sidenav>
+  
+    <mat-sidenav-content >
+        <p><button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button></p>
+      
+          <div class="box">
+            <div *ngIf="auth.user$ | async; then authenticated else guest">
+            </div>
+        </div>
+    
+        <ng-template #guest>
+            <h3>Hello, GUEST</h3>
+            <p>Login to get started...</p>
+            
+            <button (click)="auth.googleSignin()">
+                <i class="fa fa-google"></i> Connect Google
+            </button>
+  
+         
+            
+            </ng-template>
+    
+        
+        <ng-template #authenticated>
+            <div *ngIf="auth.user$ | async as user">
+                <h3>Hello, {{ user.displayName }}</h3>
+                <img  [src]="user.photoURL" alt="your photo?" style="width:50px;height:60px;">
+                <p>UID: {{ user.uid }}</p>
+                <button (click)="auth.signOut()">Logout</button>
+            </div>
+  
+            <button (click)="goToMessages()">
+                <i class="fa fa-message"></i> See Messages
+            </button>
+            </ng-template>
+ 
+            <br>
+            <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="example-footer">Footer</mat-toolbar>
+</ng-container>
+

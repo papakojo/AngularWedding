@@ -1,0 +1,32 @@
+//@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+
+#timer {
+
+    text-align: center;
+    font-family: 'Lobster', cursive;
+
+  }
+
+  #days {
+    font-size: 1.8rem;
+    color: #db4844;
+  }
+  #hours {
+    font-size: 1.5rem;
+    color: #f07c22;
+  }
+  #minutes {
+    font-size: 1.3rem;
+    color: rgb(72, 78, 207);
+  }
+  #seconds {
+    font-size: 1rem;
+    color: #abcd58;
+  }
+  
+  div {
+    display: inline-block;
+    line-height: 1;
+    padding: 5px;
+    //font-size: 40px;
+  }

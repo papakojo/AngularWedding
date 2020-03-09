@@ -1,0 +1,47 @@
+
+.contactF{
+    max-width: 100%;
+    position: relative;
+}
+
+input[type=text],
+textarea {
+  //border-style: inset;
+  border: 1px solid #ccc;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: white;
+  width: 100%;
+  margin: 8px 0;
+}
+
+
+.button {
+    width: 100%;
+    background-color: rgb(72, 78, 207);
+    color: #fcfafa;
+    font-size: 20px;
+  }
+
+  
+  .closeButton2{
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    transform: translate(80%, -80%);
+    border: none;
+
+  }
+
+  .closeButton.mat-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(80%, -80%);
+    background:rgb(72, 78, 207);
+    color: #ffffff;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+  }

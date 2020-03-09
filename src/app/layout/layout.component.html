@@ -1,0 +1,80 @@
+<div class="top-container" style="height:200px;">
+
+
+  <div class="title-center">
+    <p>Angular App</p>
+  </div>
+</div>
+
+
+<nav class="navbar  navbar-expand-sm navbar-light   navbar-default " data-offset-top="197" data-spy="affix">
+
+  <button class="navbar-toggler collapsed custom-toggler" type="button" data-toggle="collapse" (click)="toggleNavbar()">
+
+    <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'"></div>
+    <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'"></div>
+    <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"></div>
+  </button>
+
+  
+  <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true" class="collapse navbar-collapse"
+    [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav ml-auto mx-auto px-2 navbar-nav nav-fill w-100">
+    
+      <li class="nav-item">
+        <a id="ourstory1" class="nav-link" [pageScrollOffset]="60" pageScroll [pageScrollOffset]="0"
+          (pageScrollFinish)="doSmth($event)" [pageScrollDuration]="1000" href="#ourstory">Our Story</a>
+      </li>
+
+      <li class="nav-item">
+        <a id="whenwhere1" class="nav-link" [pageScrollOffset]="60" pageScroll [pageScrollOffset]="0"
+          (pageScrollFinish)="doSmth($event)" [pageScrollDuration]="1000" href="#whenwhere">When & Where</a>
+      </li>
+      <li class="nav-item">
+        <a id="rsvp1" class="nav-link" [pageScrollOffset]="60" pageScroll [pageScrollOffset]="0"
+          (pageScrollFinish)="doSmth($event)" [pageScrollDuration]="1000" href="#rsvp">RSVP</a>
+      </li>
+
+     
+      <li class="nav-item">
+        <a id="registry1" class="nav-link" [pageScrollOffset]="60" pageScroll [pageScrollOffset]="0"
+          (pageScrollFinish)="doSmth($event)" [pageScrollDuration]="1000" href="#registry">Registry</a>
+      </li>
+    </ul>
+  </div>
+
+
+</nav>
+<!-- <mat-divider ></mat-divider> -->
+
+<br>
+<br>
+<br>
+
+<div >
+  <app-initial-page></app-initial-page>
+  <br>
+  <section id="ourstory" #ourstory>
+    <app-our-story></app-our-story>
+  </section>
+
+
+<br>
+<br>
+  <!-- <a pageScroll [pageScrollOffset]="0" [pageScrollDuration]="1000" href="#whenwhere">When where</a> -->
+  <section id="whenwhere" #whenwhere>   
+    <app-when-where></app-when-where>
+  </section>
+  <br>
+  <section id="rsvp" #rsvp>
+    <app-rsvp></app-rsvp>
+  </section>
+<br>
+  <section id="registry" #registry>
+    <app-registry></app-registry>
+  </section>
+ 
+</div>
+
+
+<app-footer></app-footer>

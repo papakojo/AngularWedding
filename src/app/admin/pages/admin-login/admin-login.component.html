@@ -1,0 +1,22 @@
+<div *ngIf="!(auth.user | async); else alreadyLoggedIn">
+
+    <h3>Social Login</h3>
+  
+   
+ 
+  
+      <hr>
+  
+  
+  
+   
+  
+  </div>
+  
+  <ng-template #alreadyLoggedIn>
+    <p class="text-success">
+      Already logged in!
+    </p>
+  </ng-template>
+  
+  

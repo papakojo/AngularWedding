@@ -1,0 +1,47 @@
+.our-story{
+   // height: 90vh;
+}
+
+.our-story-title{
+
+ font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 10px;
+
+ font-family: pirou;
+  font-weight: bold;
+  color:#ff8282;
+  -webkit-text-fill-color: rgb(233, 101, 92);
+
+}
+
+@media (min-width: 700px){
+    .our-story-title{
+  
+      font-size: 2.5rem;
+  
+      position: flex;
+      align-content: center
+  
+    }
+  }
+
+
+  .our-story-content {
+
+   // border: 3rem solid transparent;
+    border-style: solid;
+    border-width: 3rem;
+   border-image: url("src/assets/images/iniBorder.svg")25%;
+   
+   
+}
+
+.our-story-content >p{
+    font-family: 'Merienda One', cursive;
+    
+    //font-family: dreamwood;
+    font-size: 1rem;
+    text-align: center;
+    color:  rgba(72, 79, 207, 0.753);
+   }
